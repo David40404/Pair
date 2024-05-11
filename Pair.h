@@ -37,6 +37,18 @@ namespace Pair {
 			return this->m_first == other.m_first and this->m_second == other.m_second;
 		}
 
+		bool operator!=(const Pair <_Ty1, _Ty2>& other) const {
+			return this->m_first != other.m_first or this->m_second != other.m_second;
+		}
+
+		bool operator<(const Pair <_Ty1, _Ty2>& other) const {
+			return this->m_first < other.m_first and this->m_second < other.m_second;
+		}
+
+		bool operator>(const Pair <_Ty1, _Ty2>& other) const {
+			return this->m_first > other.m_first and this->m_second > other.m_second;
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, Pair <_Ty1, _Ty2>& _pair) {
 			out << _pair.first() << " " << _pair.second();
 			return out;
