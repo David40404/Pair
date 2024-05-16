@@ -21,6 +21,14 @@ namespace Pair {
 			return m_second;
 		}
 
+		_Ty1* first_ptr() {
+			return &m_first;
+		}
+
+		_Ty2* second_ptr() {
+			return &m_second;
+		}
+		
 		Pair <_Ty2, _Ty1> getSwapped() {
 			return Pair <_Ty2, _Ty1>(m_second, m_first);
 		}
